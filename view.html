@@ -1,0 +1,42 @@
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Neighborhood Map</title>
+   <!-- script files-->
+   <script src="js/jquery-3.2.1.js"></script>
+   <script src="js/knockout-3.4.0.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link href="style.css" rel="stylesheet">
+ </head>
+
+ <body>
+  <div class="container">
+    <div class="row">
+      <div class="sidebar">
+         <h2 class="center" > Chennai City Culture </h2>
+         <hr>
+         <!-- input box for search-->
+          <div class="input-group" >
+            <input id="text-search" type="text" class="input-text" placeholder="Enter here" data-bind="textInput: query">
+          </div>
+          <!-- list of places under the search box with click enabled-->
+          <div class= "list-box" data-bind="foreach: filteredItems">
+            <a href="#" class="list-item"data-bind="text: title, click: $parent.setLoc"></a>
+            <hr>
+          </div>
+      </div>
+    </div>
+  <!--google maps -->
+  <div id="map" class="map-canvas"   >
+  </div>
+  </div>
+  <!--viewmodel -->
+  <script src="js/viewmodel.js"></script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBf9eFadPLrD3QIQT7ygrYN8aRO5YuAUyE&callback=initMap" onerror="error()">
+  </script>
+
+ </body>
+
+</html>

@@ -1,0 +1,108 @@
+html,
+body {
+  font-family: courier, arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100%;
+  position: relative;
+}
+
+h2 {
+  color: #FFCB00;
+  text-align: center;
+}
+
+.map-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar {
+  position: absolute;
+  background:#499cd7;
+  color: #FFCB00;
+  text-align: center;
+  z-index: 99;
+  border: 1px solid #999;
+  border-radius: 3px;
+  line-height: 35px;
+  height: 100%;
+  width: 20%;
+  overflow: auto;
+  padding: 10px 10px 30px 10px;
+  max-width: 28%;
+}
+
+.list-item {
+  font-size: 20px;
+  padding: 1px;
+  margin: 0 auto;
+  cursor: pointer;
+  color: #FFCB00;
+}
+
+.input-group {
+  width: 100%;
+}
+.input-text {
+  width: 70%;
+  font-style: italic;
+}
+
+/* responsiveness */
+
+@media screen and (min-width: 1441px){
+  .sidebar { width : 300px;}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1440px){
+  .sidebar {
+    max-width: 33%;
+    width:30%;
+    font-size: 16px;
+    }
+    .list-item {
+      margin: auto;
+      font-size: 20px;
+    }
+    #map {
+      width :100%;
+      max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+  .sidebar {
+    max-width: 33%;
+    width:30%;
+    font-size: 14px;
+    }
+    .list-item {
+      margin: auto;
+      font-size: 14px;
+    }
+    #map {
+      width :100%;
+      max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 767px){
+  .sidebar {
+    max-width: 30%;
+    width:30%;
+    font-size: 14px;
+    }
+    .list-item {
+      margin: auto;
+      font-size: 14px;
+    }
+    #map {
+      width :100%;
+      max-width: 100%;
+    }
+}
